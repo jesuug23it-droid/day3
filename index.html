@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Student Registration</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Profile Cards</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h2>Student Registration System</h2>
-</header>
+  <h1>Interactive Profile Cards</h1>
+  <button id="openFormBtn">Add Profile</button>
 
-<div class="container">
-  <h1>Register</h1>
-  <form id="registrationForm">
-    <label>Name:</label>
-    <input type="text" id="name" required>
+  <!-- Profile Cards Container -->
+  <div id="cardContainer"></div>
 
-    <label>Email:</label>
-    <input type="email" id="email" required>
+  <!-- Modal Form -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Add New Profile</h2>
+      <form id="profileForm">
+        <input type="text" id="nameInput" placeholder="Enter Name" required />
+        <input type="text" id="roleInput" placeholder="Enter Role" required />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
 
-    <label>Department:</label>
-    <input type="text" id="department" required>
-
-    <label>Year:</label>
-    <input type="text" id="year" required>
-
-    <label>Project Title:</label>
-    <input type="text" id="projectTitle" required>
-
-    <button type="submit">Register</button>
-  </form>
-</div>
-
-<footer>
-  <p>© 2025 Student Registration Portal</p>
-</footer>
-
-<script src="script.js"></script>
+  <!-- Important: type="module" to allow imports -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>
